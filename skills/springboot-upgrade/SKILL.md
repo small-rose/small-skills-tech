@@ -10,8 +10,8 @@ tags:
   - "maven"
 author:
   name: "small-skills-tech"
-  github: "small-skills-tech"
-source: "https://github.com/small-skills-tech/small-skills-tech/tree/main/skills/springboot-upgrade"
+  github: "small-rose"
+source: "https://github.com/small-rose/small-skills-tech/tree/main/skills/springboot-upgrade"
 triggers:
   - "springboot升级"
   - "spring boot升级"

@@ -20,7 +20,7 @@ A collection of technical OpenCode SKILLs. SKILLs are skill modules for the Open
 
 ```bash
 # Install via opencode
-opencode skill install https://github.com/small-skills-tech/small-skills-tech skills/springboot-upgrade
+opencode skill install https://github.com/small-rose/small-skills-tech skills/springboot-upgrade
 
 # Or search directly
 # /find-skill springboot-upgrade

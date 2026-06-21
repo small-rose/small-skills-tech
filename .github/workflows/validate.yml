@@ -3,11 +3,17 @@ name: Validate SKILLs
 on:
   pull_request:
     paths:
-      - 'skills/**/*.md'
+      - 'skills/**'
+      - 'case-studies/**'
+      - 'templates/**'
+      - '.github/workflows/validate.yml'
   push:
     branches: [main]
     paths:
-      - 'skills/**/*.md'
+      - 'skills/**'
+      - 'case-studies/**'
+      - 'templates/**'
+      - '.github/workflows/validate.yml'
 
 jobs:
   validate:
@@ -17,12 +23,37 @@ jobs:
 
       - name: Validate SKILL.md frontmatter
         run: |
-          echo "Checking SKILL.md files..."
+          echo "=== Validating SKILL.md files ==="
+          has_error=0
           for skill in skills/*/; do
-            if [ ! -f "${skill}SKILL.md" ]; then
+            skillmd="${skill}SKILL.md"
+            if [ ! -f "$skillmd" ]; then
               echo "❌ Missing SKILL.md in ${skill}"
-              exit 1
+              has_error=1
+              continue
             fi
-            echo "✅ Found SKILL.md in ${skill}"
+
+            # Check required frontmatter fields
+            name=$(head -20 "$skillmd" | grep "^name: ")
+            desc=$(head -20 "$skillmd" | grep "^description: ")
+            trig=$(head -20 "$skillmd" | grep "^triggers:")
+
+            missing=""
+            [ -z "$name" ] && missing="$missing name"
+            [ -z "$desc" ] && missing="$missing description"
+            [ -z "$trig" ] && missing="$missing triggers"
+
+            if [ -n "$missing" ]; then
+              echo "❌ ${skillmd} missing required fields:${missing}"
+              has_error=1
+            else
+              skill_name=$(echo "$name" | sed 's/^name: *//')
+              echo "✅ ${skill_name} — frontmatter OK"
+            fi
           done
-          echo "All skills validated successfully."
+          if [ "$has_error" -eq 1 ]; then
+            echo "---"
+            echo "Validation FAILED."
+            exit 1
+          fi
+          echo "=== All skills validated successfully. ==="

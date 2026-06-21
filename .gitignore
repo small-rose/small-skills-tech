@@ -1,0 +1,23 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+target/
+build/
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+*.gz
+
+# Temp
+tmp/
+temp/
