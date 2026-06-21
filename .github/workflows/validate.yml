@@ -1,0 +1,28 @@
+name: Validate SKILLs
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**/*.md'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**/*.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate SKILL.md frontmatter
+        run: |
+          echo "Checking SKILL.md files..."
+          for skill in skills/*/; do
+            if [ ! -f "${skill}SKILL.md" ]; then
+              echo "❌ Missing SKILL.md in ${skill}"
+              exit 1
+            fi
+            echo "✅ Found SKILL.md in ${skill}"
+          done
+          echo "All skills validated successfully."
