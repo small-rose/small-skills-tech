@@ -39,6 +39,29 @@ Once installed, trigger the skill by mentioning related keywords in conversation
 
 ---
 
+## Case Studies
+
+Real-world upgrade cases to complement the SKILL's methodology.
+
+| Case | Description | 说明 |
+|------|-------------|------|
+| [FMS Spring Boot Upgrade](./case-studies/fms-springboot-upgrade/) | FMS fee management system from Spring 5.2 to Boot 2.7.18 | FMS费用跟单系统从 Spring 5.2 升级到 Boot 2.7.18 实战 |
+
+Each case study contains an analysis report, upgrade log, and topic-specific guides.
+
+---
+
+## Templates
+
+Reusable templates for planning and documenting upgrades, located under each SKILL's `templates/` directory:
+
+| Template | SKILL | Purpose |
+|----------|-------|---------|
+| [upgrade-plan-template.md](./skills/springboot-upgrade/templates/upgrade-plan-template.md) | springboot-upgrade | Structured upgrade analysis plan |
+| [upgrade-log-template.md](./skills/springboot-upgrade/templates/upgrade-log-template.md) | springboot-upgrade | Versioned upgrade process log |
+
+---
+
 ## Structure
 
 ```
@@ -47,11 +70,17 @@ small-skills-tech/
 ├── LICENSE                      # Apache 2.0
 ├── .github/workflows/
 │   └── validate.yml             # CI: validate SKILL.md frontmatter
+├── case-studies/                # Real-world upgrade case studies
+│   └── <case-name>/
+│       ├── README.md
+│       ├── analysis-report.md
+│       └── upgrade-log.md
 └── skills/
     └── <skill-name>/
         ├── SKILL.md             # Skill definition (required)
         ├── README.md            # Skill overview (recommended)
         ├── modules/             # Sub-modules (recommended for complex skills)
+        ├── templates/           # Reusable templates
         └── appendix.md          # Additional reference
 ```
 
