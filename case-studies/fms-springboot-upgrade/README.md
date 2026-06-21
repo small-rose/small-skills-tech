@@ -23,7 +23,7 @@
 
 | Metric | Value |
 |--------|-------|
-| Upgrade versions | v1.0 → v1.24 |
+| Upgrade versions | v1.0 → v1.25 |
 | Days in upgrade | ~1 (intensive) |
 | Files modified | ~20+ (POM, Java config, XML config, resources) |
 | Web.xml items migrated | 24 Servlets + 4 Filters + 4 Listeners |
@@ -51,6 +51,7 @@
 4. **web.xml → Java Config** — must use `ServletRegistrationBean`/`FilterRegistrationBean`; `@ServletComponentScan` only works with `@WebServlet` annotations
 5. **Cache API deprecation** — Spring Boot 2.x cache abstractions changed significantly; `RedisCacheConfiguration` became immutable
 6. **Circular dependency by default** — Spring Boot 2.6+ forbids circular references by default; need `allow-circular-references: true` or refactor
+7. **System-scoped JARs invisible to ClassLoader** — `DoradoLoader.preload()` scans `META-INF/dorado-package.properties` via `ClassLoader.getResources()` but misses `<scope>system</scope>` JARs in embedded Tomcat. Workaround: add explicit `@ImportResource` for the add-on's context.xml
 
 ## Related Resources
 

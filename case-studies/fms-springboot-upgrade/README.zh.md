@@ -23,7 +23,7 @@
 
 | 指标 | 值 |
 |--------|-------|
-| 升级版本数 | v1.0 → v1.24 |
+| 升级版本数 | v1.0 → v1.25 |
 | 升级耗时 | ~1 天（密集） |
 | 修改文件数 | ~20+（POM、Java 配置、XML 配置、资源文件）|
 | Web.xml 迁移项 | 24 个 Servlet + 4 个 Filter + 4 个 Listener |
@@ -51,6 +51,7 @@
 4. **web.xml → Java 配置** — 必须使用 `ServletRegistrationBean`/`FilterRegistrationBean`；`@ServletComponentScan` 只对带 `@WebServlet` 注解的类有效
 5. **缓存 API 弃用** — Spring Boot 2.x 缓存抽象变化显著；`RedisCacheConfiguration` 变为不可变类
 6. **默认禁止循环依赖** — Spring Boot 2.6+ 默认禁止循环引用，需要设置 `allow-circular-references: true` 或重构代码
+7. **System scope JAR 对 ClassLoader 不可见** — `DoradoLoader.preload()` 通过 `ClassLoader.getResources()` 扫描 `META-INF/dorado-package.properties`，但嵌入式 Tomcat 中看不到 `<scope>system</scope>` 的 JAR。解决方法：`@ImportResource` 显式导入 add-on 的 context.xml
 
 ## 相关资源
 
