@@ -13,6 +13,7 @@ A collection of technical OpenCode SKILLs. SKILLs are skill modules for the Open
 | Skill | Description | 说明 |
 |-------|-------------|------|
 | [springboot-upgrade](./skills/springboot-upgrade/) | Spring Boot migration plan generator — analyzes component compatibility, assesses risks, and generates detailed upgrade plans | Spring Boot 升级方案生成器 — 分析组件兼容性、评估风险、生成详细改造方案 |
+| [tech-support-sop](./skills/tech-support-sop/) | Technical support SOP — auto-detects tech stacks, verifies sources, provides structured answers with citations | 技术问题解答 SOP — 自动检测技术栈、验证来源、提供结构化解答 |
 
 ---
 
@@ -21,9 +22,11 @@ A collection of technical OpenCode SKILLs. SKILLs are skill modules for the Open
 ```bash
 # Install via opencode
 opencode skill install https://github.com/small-rose/small-skills-tech skills/springboot-upgrade
+opencode skill install https://github.com/small-rose/small-skills-tech skills/tech-support-sop
 
 # Or search directly
 # /find-skill springboot-upgrade
+# /find-skill tech-support-sop
 ```
 
 ---
@@ -32,10 +35,19 @@ opencode skill install https://github.com/small-rose/small-skills-tech skills/sp
 
 Once installed, trigger the skill by mentioning related keywords in conversation:
 
+**springboot-upgrade:**
 - "帮我分析这个项目升级到 Spring Boot"
 - "Spring MVC 迁移到 Spring Boot"
 - "版本兼容分析"
 - "专有框架迁移"
+
+**tech-support-sop:**
+- "我的 Spring Boot 应用启动报错"
+- "nginx 反向代理 502"
+- "Django 迁移数据库失败"
+- "Docker 容器启动失败"
+- "Python 版本查询"
+- "如何配置环境变量"
 
 ---
 
@@ -59,6 +71,10 @@ Reusable templates for planning and documenting upgrades, located under each SKI
 |----------|-------|---------|
 | [upgrade-plan-template.md](./skills/springboot-upgrade/templates/upgrade-plan-template.md) | springboot-upgrade | Structured upgrade analysis plan |
 | [upgrade-log-template.md](./skills/springboot-upgrade/templates/upgrade-log-template.md) | springboot-upgrade | Versioned upgrade process log |
+| [question-analysis.md](./skills/tech-support-sop/templates/question-analysis.md) | tech-support-sop | Problem analysis template |
+| [verification-report.md](./skills/tech-support-sop/templates/verification-report.md) | tech-support-sop | Verification report template |
+| [environment-check.md](./skills/tech-support-sop/templates/environment-check.md) | tech-support-sop | Environment check template |
+| [test-script.md](./skills/tech-support-sop/templates/test-script.md) | tech-support-sop | Test script template |
 
 ---
 

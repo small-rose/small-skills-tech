@@ -11,6 +11,7 @@
 | Skill | 说明 |
 |-------|------|
 | [springboot-upgrade](./skills/springboot-upgrade/) | Spring Boot 升级方案生成器 — 分析组件兼容性、评估风险、生成详细改造方案 |
+| [tech-support-sop](./skills/tech-support-sop/) | 技术问题解答 SOP — 自动检测技术栈、验证来源、提供结构化解答 |
 
 ---
 
@@ -19,9 +20,11 @@
 ```bash
 # 通过 opencode 安装
 opencode skill install https://github.com/small-rose/small-skills-tech skills/springboot-upgrade
+opencode skill install https://github.com/small-rose/small-skills-tech skills/tech-support-sop
 
 # 或在对话中搜索
 # /find-skill springboot-upgrade
+# /find-skill tech-support-sop
 ```
 
 ---
@@ -30,10 +33,19 @@ opencode skill install https://github.com/small-rose/small-skills-tech skills/sp
 
 安装后在对话中提及以下关键词触发：
 
+**springboot-upgrade:**
 - "帮我分析这个项目升级到 Spring Boot"
 - "Spring MVC 迁移到 Spring Boot"
 - "版本兼容分析"
 - "专有框架迁移"
+
+**tech-support-sop:**
+- "我的 Spring Boot 应用启动报错"
+- "nginx 反向代理 502"
+- "Django 迁移数据库失败"
+- "Docker 容器启动失败"
+- "Python 版本查询"
+- "如何配置环境变量"
 
 ---
 
@@ -57,6 +69,10 @@ opencode skill install https://github.com/small-rose/small-skills-tech skills/sp
 |------|-----------|------|
 | [upgrade-plan-template.md](./skills/springboot-upgrade/templates/upgrade-plan-template.md) | springboot-upgrade | 结构化升级分析方案 |
 | [upgrade-log-template.md](./skills/springboot-upgrade/templates/upgrade-log-template.md) | springboot-upgrade | 版本化升级过程记录 |
+| [question-analysis.md](./skills/tech-support-sop/templates/question-analysis.md) | tech-support-sop | 问题分析模板 |
+| [verification-report.md](./skills/tech-support-sop/templates/verification-report.md) | tech-support-sop | 验证报告模板 |
+| [environment-check.md](./skills/tech-support-sop/templates/environment-check.md) | tech-support-sop | 环境检查模板 |
+| [test-script.md](./skills/tech-support-sop/templates/test-script.md) | tech-support-sop | 测试脚本模板 |
 
 ---
 

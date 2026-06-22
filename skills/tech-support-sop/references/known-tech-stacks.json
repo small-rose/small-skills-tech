@@ -1,0 +1,317 @@
+{
+  "last_updated": "2026-06-18T10:00:00Z",
+  "version": "1.1.0",
+  "description": "已知技术栈知识库，会根据用户提问自动更新",
+  "tech_stacks": {
+    "java": {
+      "name": "Java",
+      "sub_types": {
+        "spring-boot": {
+          "name": "Spring Boot",
+          "versions": ["2.7.0-2.7.18", "3.0.0-3.0.13", "3.1.0-3.1.12", "3.2.0-3.2.6", "3.3.0-3.3.3", "3.4.0-3.4.1"],
+          "common_issues": ["configuration", "dependency", "deployment", "bean-creation", "profile"],
+          "official_docs": ["https://spring.io/projects/spring-boot"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "spring-framework": {
+          "name": "Spring Framework",
+          "versions": ["5.3.0-5.3.39", "6.0.0-6.0.21", "6.1.0-6.1.14", "6.2.0-6.2.6"],
+          "common_issues": ["ioc", "aop", "mvc", "data-access"],
+          "official_docs": ["https://spring.io/projects/spring-framework"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "mybatis": {
+          "name": "MyBatis",
+          "versions": ["3.5.0-3.5.16"],
+          "common_issues": ["mapping", "sql", "performance", "plugin"],
+          "official_docs": ["https://mybatis.org/mybatis-3/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "maven": {
+          "name": "Maven",
+          "versions": ["3.8.0-3.9.9"],
+          "common_issues": ["dependency", "plugin", "build", "repository"],
+          "official_docs": ["https://maven.apache.org/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "gradle": {
+          "name": "Gradle",
+          "versions": ["8.0-8.12"],
+          "common_issues": ["dependency", "plugin", "build", "wrapper"],
+          "official_docs": ["https://gradle.org/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "python": {
+      "name": "Python",
+      "sub_types": {
+        "django": {
+          "name": "Django",
+          "versions": ["4.2.0-4.2.17", "5.0.0-5.0.11", "5.1.0-5.1.5", "5.2.0-5.2.1"],
+          "common_issues": ["orm", "template", "migration", "view", "middleware"],
+          "official_docs": ["https://docs.djangoproject.com/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "flask": {
+          "name": "Flask",
+          "versions": ["3.0.0-3.1.0"],
+          "common_issues": ["routing", "template", "extension", "configuration"],
+          "official_docs": ["https://flask.palletsprojects.com/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "fastapi": {
+          "name": "FastAPI",
+          "versions": ["0.100.0-0.115.12"],
+          "common_issues": ["async", "dependency", "validation", "authentication"],
+          "official_docs": ["https://fastapi.tiangolo.com/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "pandas": {
+          "name": "Pandas",
+          "versions": ["2.0.0-2.2.3"],
+          "common_issues": ["dataframe", "series", "io", "performance"],
+          "official_docs": ["https://pandas.pydata.org/docs/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "numpy": {
+          "name": "NumPy",
+          "versions": ["1.24.0-2.2.6"],
+          "common_issues": ["array", "linear-algebra", "broadcasting"],
+          "official_docs": ["https://numpy.org/doc/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "nginx": {
+      "name": "Nginx",
+      "sub_types": {
+        "reverse-proxy": {
+          "name": "反向代理",
+          "versions": ["1.24.0-1.27.4"],
+          "common_issues": ["proxy_pass", "upstream", "ssl", "websocket"],
+          "official_docs": ["https://nginx.org/en/docs/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "load-balancer": {
+          "name": "负载均衡",
+          "versions": ["1.24.0-1.27.4"],
+          "common_issues": ["upstream", "health-check", "session-sticky"],
+          "official_docs": ["https://nginx.org/en/docs/http/load_balancing.html"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "ssl": {
+          "name": "SSL/TLS 配置",
+          "versions": ["1.24.0-1.27.4"],
+          "common_issues": ["certificate", "cipher", "protocol"],
+          "official_docs": ["https://nginx.org/en/docs/http/configuring_https_servers.html"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "nodejs": {
+      "name": "Node.js",
+      "sub_types": {
+        "express": {
+          "name": "Express",
+          "versions": ["4.18.0-4.21.2", "5.0.0-5.1.0"],
+          "common_issues": ["middleware", "routing", "error-handling", "static-files"],
+          "official_docs": ["https://expressjs.com/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "koa": {
+          "name": "Koa",
+          "versions": ["2.15.0-2.16.1"],
+          "common_issues": ["middleware", "context", "error-handling"],
+          "official_docs": ["https://koajs.com/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "nextjs": {
+          "name": "Next.js",
+          "versions": ["14.0.0-15.3.3"],
+          "common_issues": ["routing", "ssr", "api-routes", "deployment"],
+          "official_docs": ["https://nextjs.org/docs"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "docker": {
+      "name": "Docker",
+      "sub_types": {
+        "container": {
+          "name": "容器管理",
+          "versions": ["24.0.0-27.5.1"],
+          "common_issues": ["network", "volume", "compose", "image"],
+          "official_docs": ["https://docs.docker.com/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "dockerfile": {
+          "name": "Dockerfile 编写",
+          "versions": ["1.0"],
+          "common_issues": ["build", "layer", "cache", "multi-stage"],
+          "official_docs": ["https://docs.docker.com/reference/dockerfile/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "compose": {
+          "name": "Docker Compose",
+          "versions": ["2.0-2.32.4"],
+          "common_issues": ["service", "network", "volume", "environment"],
+          "official_docs": ["https://docs.docker.com/compose/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "mysql": {
+      "name": "MySQL",
+      "sub_types": {
+        "database": {
+          "name": "数据库管理",
+          "versions": ["5.7.0-5.7.44", "8.0.0-8.0.40", "8.4.0-8.4.4", "9.0.0-9.2.0"],
+          "common_issues": ["query", "index", "performance", "replication"],
+          "official_docs": ["https://dev.mysql.com/doc/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "postgresql": {
+      "name": "PostgreSQL",
+      "sub_types": {
+        "database": {
+          "name": "数据库管理",
+          "versions": ["14.0-14.15", "15.0-15.10", "16.0-16.6", "17.0-17.2"],
+          "common_issues": ["query", "index", "performance", "extension"],
+          "official_docs": ["https://www.postgresql.org/docs/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "redis": {
+      "name": "Redis",
+      "sub_types": {
+        "cache": {
+          "name": "缓存服务",
+          "versions": ["6.0.0-6.2.16", "7.0.0-7.4.2"],
+          "common_issues": ["memory", "eviction", "cluster", "sentinel"],
+          "official_docs": ["https://redis.io/docs/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "kubernetes": {
+      "name": "Kubernetes",
+      "sub_types": {
+        "cluster": {
+          "name": "集群管理",
+          "versions": ["1.27.0-1.32.1"],
+          "common_issues": ["pod", "service", "deployment", "configmap"],
+          "official_docs": ["https://kubernetes.io/docs/home/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "rabbitmq": {
+      "name": "RabbitMQ",
+      "sub_types": {
+        "message-queue": {
+          "name": "消息队列",
+          "versions": ["3.12.0-3.13.7", "4.0.0-4.1.0"],
+          "common_issues": ["connection", "channel", "exchange", "queue", "ack"],
+          "official_docs": ["https://www.rabbitmq.com/docs"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "kafka": {
+      "name": "Kafka",
+      "sub_types": {
+        "message-stream": {
+          "name": "消息流",
+          "versions": ["3.6.0-3.9.0", "4.0.0"],
+          "common_issues": ["topic", "partition", "consumer", "producer", "offset"],
+          "official_docs": ["https://kafka.apache.org/documentation/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "elasticsearch": {
+      "name": "Elasticsearch",
+      "sub_types": {
+        "search-engine": {
+          "name": "搜索引擎",
+          "versions": ["7.17.0-7.17.27", "8.0.0-8.17.0"],
+          "common_issues": ["index", "mapping", "query", "cluster", "shard"],
+          "official_docs": ["https://www.elastic.co/guide/en/elasticsearch/reference/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "git": {
+      "name": "Git",
+      "sub_types": {
+        "version-control": {
+          "name": "版本控制",
+          "versions": ["2.40.0-2.47.1"],
+          "common_issues": ["branch", "merge", "rebase", "conflict", "remote"],
+          "official_docs": ["https://git-scm.com/doc"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    },
+    "linux": {
+      "name": "Linux",
+      "sub_types": {
+        "ubuntu": {
+          "name": "Ubuntu",
+          "versions": ["20.04", "22.04", "24.04"],
+          "common_issues": ["package", "service", "permission", "network"],
+          "official_docs": ["https://ubuntu.com/server/docs"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        },
+        "centos": {
+          "name": "CentOS",
+          "versions": ["7.0-7.9", "8.0-8.5", "9.0-9.5"],
+          "common_issues": ["package", "service", "firewall", "selinux"],
+          "official_docs": ["https://docs.centos.org/"],
+          "verification_status": "verified",
+          "last_verified": "2026-06-18"
+        }
+      }
+    }
+  },
+  "learning_log": [
+    {
+      "timestamp": "2026-06-18T10:00:00Z",
+      "action": "initialization",
+      "tech_stack": "all",
+      "details": "初始化技术栈知识库"
+    }
+  ]
+}
